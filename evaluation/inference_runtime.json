@@ -1,0 +1,30 @@
+{
+  "v1": {
+    "records": 928,
+    "wall_seconds_excluding_model_load": 2500.139735221863,
+    "record_seconds_median": 2.7284562769928016,
+    "record_seconds_p95": 4.358639538897841,
+    "threads": 6,
+    "method": "Serial full model forward with raw/calibrated output serialization; model loading excluded."
+  },
+  "v2": {
+    "records": 928,
+    "wall_seconds_excluding_model_load": 2465.285644054413,
+    "record_seconds_median": 2.6133714454990695,
+    "record_seconds_p95": 4.405548580498725,
+    "threads": 6,
+    "method": "Serial full model forward with raw/calibrated output serialization; model loading excluded."
+  },
+  "lexical": {
+    "complete": true,
+    "records": 928,
+    "seconds": 2.4894699660071637,
+    "input_sha256": "a608aad3675667457717fdd15e0054e518e304da7ba0f48608ae888c763f2dfb",
+    "artifact_sha256": "70c70a883055642bb5c44e989298132fb1ff86f57d4d757c719ba975776ddeb1",
+    "freeze_sha256": "fed9b05c7553f42ea6e44b4eacd8b1ba1810437f49c6b3e0f1f769dd2052e7ce",
+    "output_sha256": "036ddebda11b813a61ab5def2739bb1b698f58310c018d24b8970eee4f7303dd",
+    "threads": 1,
+    "probability_precision": "native float64 JSON serialization without rounding"
+  },
+  "caveat": "Same shared execution environment, but different batching and loading conventions; a controlled cross-implementation speed ratio is not claimed."
+}

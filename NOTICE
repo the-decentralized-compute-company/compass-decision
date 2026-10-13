@@ -1,0 +1,10 @@
+Compass CPU v2
+The Decentralized Compute Company
+Copyright 2026 The Decentralized Compute Company, for original project glue and documentation.
+
+Original project glue and original documentation are licensed under Apache License 2.0.
+Trained-weight license status and third-party exclusions are described in LICENSE_STATUS.md.
+Clef joint_schema_model.py retains its original Apache-2.0 license and upstream copyright.
+Pinned source: https://github.com/unslothai/unsloth/blob/0b1291bfd7c147e2edf82c085b8412c2630be4fe/unsloth/_vendor/clef/joint_schema_model.py
+Qwen tokenizer/base attribution: https://huggingface.co/Qwen/Qwen3.5-0.8B/tree/2fc06364715b967f1860aea9cf38778875588b17
+Additional dataset/source attribution: LICENSE_NOTICES.md and licenses/.

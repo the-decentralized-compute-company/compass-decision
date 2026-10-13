@@ -1,0 +1,516 @@
+{
+  "status": "training, calibration, and independent fresh evaluation complete",
+  "completed_experiments": {
+    "head_soft": {
+      "status": "stage_complete",
+      "updates": 1395,
+      "examples_seen": 5577,
+      "unique_train_records": 1859,
+      "best_source": "head_epoch_3_position_1859",
+      "best_selection_score": 0.5183333333333333,
+      "best_hard_nll": 1.0085793665412182,
+      "epoch_losses": [
+        {
+          "epoch": 1,
+          "mean_loss": 1.7078047327101764,
+          "examples": 1859
+        },
+        {
+          "epoch": 2,
+          "mean_loss": 1.3567049188555607,
+          "examples": 1859
+        },
+        {
+          "epoch": 3,
+          "mean_loss": 1.260447016406199,
+          "examples": 1859
+        }
+      ],
+      "early_stopped": false,
+      "wall_seconds_this_process": 856.345109462738,
+      "peak_rss_mib": 2641.859375
+    },
+    "head_hybrid": {
+      "status": "stage_complete",
+      "updates": 1395,
+      "examples_seen": 5577,
+      "unique_train_records": 1859,
+      "best_source": "head_epoch_3_position_1859",
+      "best_selection_score": 0.5129166666666667,
+      "best_hard_nll": 0.9904196533115341,
+      "epoch_losses": [
+        {
+          "epoch": 1,
+          "mean_loss": 1.6774288521785239,
+          "examples": 1859
+        },
+        {
+          "epoch": 2,
+          "mean_loss": 1.334925512888601,
+          "examples": 1859
+        },
+        {
+          "epoch": 3,
+          "mean_loss": 1.2407441144926055,
+          "examples": 1859
+        }
+      ],
+      "early_stopped": false,
+      "wall_seconds_this_process": 861.603622674942,
+      "peak_rss_mib": 2739.19921875
+    },
+    "lora_soft": {
+      "status": "stage_complete",
+      "updates": 930,
+      "examples_seen": 3718,
+      "unique_train_records": 1859,
+      "best_source": "lora_epoch_2_position_932",
+      "best_selection_score": 0.6408333333333334,
+      "best_hard_nll": 0.7982747696618299,
+      "epoch_losses": [
+        {
+          "epoch": 1,
+          "mean_loss": 1.1724011063315418,
+          "examples": 1859
+        },
+        {
+          "epoch": 2,
+          "mean_loss": 0.9663904531476627,
+          "examples": 1859
+        }
+      ],
+      "early_stopped": false,
+      "wall_seconds_this_process": 42898.52252006531,
+      "peak_rss_mib": 5362.62109375
+    }
+  },
+  "selected_model": {
+    "source": "lora_soft/best",
+    "head_updates": 1395,
+    "head_record_exposures": 5577,
+    "lora_updates": 698,
+    "lora_record_exposures": 2791,
+    "total_updates_on_selected_path": 2093,
+    "total_record_exposures_on_selected_path": 8368,
+    "selection_note": "Terminal epoch-2 weights were discarded by the development accuracy-first rule."
+  },
+  "compute": {
+    "device": "CPU only",
+    "torch_threads": 6,
+    "torch_interop_threads": 1,
+    "peak_training_rss_mib": 5362.62109375,
+    "lora_process_first_start_utc": "2026-10-12T11:08:58Z",
+    "lora_complete_utc": "2026-10-13T02:47:38Z",
+    "lora_elapsed_wall_seconds_including_one_service_restart": 56320,
+    "calibration_selected_freeze_utc": "2026-10-13T03:03:27Z",
+    "head_comparisons_seconds": 1717.94873213768,
+    "caveat": "Per-process wall timers reset after the service restart; unique accepted updates and loss totals were restored. Feature caching and independent final evaluation are additional work."
+  },
+  "parameters": {
+    "pretrained_base": 852985920,
+    "joint_head": 27324932,
+    "lora_adapter": 5411328
+  },
+  "calibration": {
+    "temperature": 0.7071067811865475,
+    "grid": [
+      0.25,
+      4,
+      161
+    ],
+    "objective": "hard_nll",
+    "before": {
+      "overall": {
+        "n": 840,
+        "accuracy": 0.655952380952381,
+        "hard_nll": 0.8352373608251322,
+        "soft_cross_entropy": 0.9410177178765956
+      },
+      "slices": {
+        "group:typed_decisions:en": {
+          "n": 600,
+          "accuracy": 0.6983333333333334,
+          "hard_nll": 0.795219071879983,
+          "soft_cross_entropy": 0.9433115717520316
+        },
+        "domain:security_incidents": {
+          "n": 150,
+          "accuracy": 0.7333333333333333,
+          "hard_nll": 0.8019186898072561,
+          "soft_cross_entropy": 0.9682488046089808
+        },
+        "language:en": {
+          "n": 720,
+          "accuracy": 0.675,
+          "hard_nll": 0.8141081005629092,
+          "soft_cross_entropy": 0.9375185171229498
+        },
+        "type:noul": {
+          "n": 180,
+          "accuracy": 0.7111111111111111,
+          "hard_nll": 0.5768179296205441,
+          "soft_cross_entropy": 0.6052306545277436
+        },
+        "type:choice": {
+          "n": 420,
+          "accuracy": 0.6071428571428571,
+          "hard_nll": 0.9217765873379471,
+          "soft_cross_entropy": 0.9971118501779399
+        },
+        "type:score": {
+          "n": 240,
+          "accuracy": 0.7,
+          "hard_nll": 0.8776082878311475,
+          "soft_cross_entropy": 1.094693283860882
+        },
+        "group:snli:en": {
+          "n": 60,
+          "accuracy": 0.3333333333333333,
+          "hard_nll": 1.0949045995871225,
+          "soft_cross_entropy": 1.0949045995871225
+        },
+        "domain:caption_nli": {
+          "n": 120,
+          "accuracy": 0.3333333333333333,
+          "hard_nll": 1.097427593668302,
+          "soft_cross_entropy": 1.097427593668302
+        },
+        "group:massive:tr": {
+          "n": 60,
+          "accuracy": 0.75,
+          "hard_nll": 0.8240752570474608,
+          "soft_cross_entropy": 0.8240752570474608
+        },
+        "domain:weather": {
+          "n": 8,
+          "accuracy": 1.0,
+          "hard_nll": 0.00013232010145713957,
+          "soft_cross_entropy": 0.00013232010145713957
+        },
+        "language:tr": {
+          "n": 120,
+          "accuracy": 0.5416666666666666,
+          "hard_nll": 0.9620129223984709,
+          "soft_cross_entropy": 0.9620129223984709
+        },
+        "domain:customer_service": {
+          "n": 150,
+          "accuracy": 0.82,
+          "hard_nll": 0.6481144605576992,
+          "soft_cross_entropy": 0.840477929910024
+        },
+        "group:massive:en": {
+          "n": 60,
+          "accuracy": 0.7833333333333333,
+          "hard_nll": 0.7222018883679576,
+          "soft_cross_entropy": 0.7222018883679576
+        },
+        "domain:transport": {
+          "n": 8,
+          "accuracy": 1.0,
+          "hard_nll": 0.026527449784168766,
+          "soft_cross_entropy": 0.026527449784168766
+        },
+        "domain:email": {
+          "n": 8,
+          "accuracy": 0.75,
+          "hard_nll": 0.23425750294791214,
+          "soft_cross_entropy": 0.23425750294791214
+        },
+        "domain:calendar": {
+          "n": 8,
+          "accuracy": 0.75,
+          "hard_nll": 0.8359856574679725,
+          "soft_cross_entropy": 0.8359856574679725
+        },
+        "domain:social": {
+          "n": 8,
+          "accuracy": 0.75,
+          "hard_nll": 0.7803580256877467,
+          "soft_cross_entropy": 0.7803580256877467
+        },
+        "domain:recommendation": {
+          "n": 8,
+          "accuracy": 0.375,
+          "hard_nll": 3.511996887391433,
+          "soft_cross_entropy": 3.511996887391433
+        },
+        "domain:invoice_processing": {
+          "n": 150,
+          "accuracy": 0.5666666666666667,
+          "hard_nll": 0.8968557779490948,
+          "soft_cross_entropy": 0.9489807499448458
+        },
+        "group:snli:tr": {
+          "n": 60,
+          "accuracy": 0.3333333333333333,
+          "hard_nll": 1.0999505877494813,
+          "soft_cross_entropy": 1.0999505877494813
+        },
+        "domain:alarm": {
+          "n": 8,
+          "accuracy": 0.875,
+          "hard_nll": 0.3008379149105167,
+          "soft_cross_entropy": 0.3008379149105167
+        },
+        "domain:qa": {
+          "n": 8,
+          "accuracy": 0.875,
+          "hard_nll": 0.3859637521361492,
+          "soft_cross_entropy": 0.3859637521361492
+        },
+        "domain:audio": {
+          "n": 8,
+          "accuracy": 0.875,
+          "hard_nll": 0.5562068054878182,
+          "soft_cross_entropy": 0.5562068054878182
+        },
+        "domain:music": {
+          "n": 8,
+          "accuracy": 0.5,
+          "hard_nll": 1.1996070396417053,
+          "soft_cross_entropy": 1.1996070396417053
+        },
+        "domain:cooking": {
+          "n": 8,
+          "accuracy": 0.625,
+          "hard_nll": 1.1749044333118945,
+          "soft_cross_entropy": 1.1749044333118945
+        },
+        "domain:agent_trace_observability": {
+          "n": 150,
+          "accuracy": 0.6733333333333333,
+          "hard_nll": 0.8339873592058817,
+          "soft_cross_entropy": 1.015538802544276
+        },
+        "domain:lists": {
+          "n": 8,
+          "accuracy": 0.5,
+          "hard_nll": 1.8116348095046675,
+          "soft_cross_entropy": 1.8116348095046675
+        },
+        "domain:play": {
+          "n": 8,
+          "accuracy": 1.0,
+          "hard_nll": 0.09920538402857915,
+          "soft_cross_entropy": 0.09920538402857915
+        },
+        "domain:takeaway": {
+          "n": 8,
+          "accuracy": 0.75,
+          "hard_nll": 0.3907087037805468,
+          "soft_cross_entropy": 0.3907087037805468
+        },
+        "domain:iot": {
+          "n": 8,
+          "accuracy": 0.875,
+          "hard_nll": 0.2887519044330702,
+          "soft_cross_entropy": 0.2887519044330702
+        }
+      },
+      "selection_score": 0.6241666666666666
+    },
+    "after": {
+      "overall": {
+        "n": 840,
+        "accuracy": 0.655952380952381,
+        "hard_nll": 0.8193169797220202,
+        "soft_cross_entropy": 0.9689129955493957
+      },
+      "slices": {
+        "group:typed_decisions:en": {
+          "n": 600,
+          "accuracy": 0.6983333333333334,
+          "hard_nll": 0.7335188686692466,
+          "soft_cross_entropy": 0.9429532908275724
+        },
+        "domain:security_incidents": {
+          "n": 150,
+          "accuracy": 0.7333333333333333,
+          "hard_nll": 0.7245769277215004,
+          "soft_cross_entropy": 0.95980322599411
+        },
+        "language:en": {
+          "n": 720,
+          "accuracy": 0.675,
+          "hard_nll": 0.7791762881921026,
+          "soft_cross_entropy": 0.9537049733240407
+        },
+        "type:noul": {
+          "n": 180,
+          "accuracy": 0.7111111111111111,
+          "hard_nll": 0.5705279647269182,
+          "soft_cross_entropy": 0.6107096200601922
+        },
+        "type:choice": {
+          "n": 420,
+          "accuracy": 0.6071428571428571,
+          "hard_nll": 0.9487913595742016,
+          "soft_cross_entropy": 1.0553315084701451
+        },
+        "type:score": {
+          "n": 240,
+          "accuracy": 0.7,
+          "hard_nll": 0.7793285762270291,
+          "soft_cross_entropy": 1.086333129554987
+        },
+        "group:snli:en": {
+          "n": 60,
+          "accuracy": 0.3333333333333333,
+          "hard_nll": 1.0936786929766338,
+          "soft_cross_entropy": 1.0936786929766338
+        },
+        "domain:caption_nli": {
+          "n": 120,
+          "accuracy": 0.3333333333333333,
+          "hard_nll": 1.0972407887379327,
+          "soft_cross_entropy": 1.0972407887379327
+        },
+        "group:massive:tr": {
+          "n": 60,
+          "accuracy": 0.75,
+          "hard_nll": 1.0195193733038193,
+          "soft_cross_entropy": 1.0195193733038193
+        },
+        "domain:weather": {
+          "n": 8,
+          "accuracy": 1.0,
+          "hard_nll": 4.81298411347808e-06,
+          "soft_cross_entropy": 4.81298411347808e-06
+        },
+        "language:tr": {
+          "n": 120,
+          "accuracy": 0.5416666666666666,
+          "hard_nll": 1.0601611289015256,
+          "soft_cross_entropy": 1.0601611289015256
+        },
+        "domain:customer_service": {
+          "n": 150,
+          "accuracy": 0.82,
+          "hard_nll": 0.5598836073900263,
+          "soft_cross_entropy": 0.8319266405701637
+        },
+        "group:massive:en": {
+          "n": 60,
+          "accuracy": 0.7833333333333333,
+          "hard_nll": 0.9212480786361318,
+          "soft_cross_entropy": 0.9212480786361318
+        },
+        "domain:transport": {
+          "n": 8,
+          "accuracy": 1.0,
+          "hard_nll": 0.006759844758917666,
+          "soft_cross_entropy": 0.006759844758917666
+        },
+        "domain:email": {
+          "n": 8,
+          "accuracy": 0.75,
+          "hard_nll": 0.24536389238511447,
+          "soft_cross_entropy": 0.24536389238511447
+        },
+        "domain:calendar": {
+          "n": 8,
+          "accuracy": 0.75,
+          "hard_nll": 0.9262224972071635,
+          "soft_cross_entropy": 0.9262224972071635
+        },
+        "domain:social": {
+          "n": 8,
+          "accuracy": 0.75,
+          "hard_nll": 0.8740524235822704,
+          "soft_cross_entropy": 0.8740524235822704
+        },
+        "domain:recommendation": {
+          "n": 8,
+          "accuracy": 0.375,
+          "hard_nll": 4.713458547121263,
+          "soft_cross_entropy": 4.713458547121263
+        },
+        "domain:invoice_processing": {
+          "n": 150,
+          "accuracy": 0.5666666666666667,
+          "hard_nll": 0.8892638608068227,
+          "soft_cross_entropy": 0.9629796975354353
+        },
+        "group:snli:tr": {
+          "n": 60,
+          "accuracy": 0.3333333333333333,
+          "hard_nll": 1.100802884499232,
+          "soft_cross_entropy": 1.100802884499232
+        },
+        "domain:alarm": {
+          "n": 8,
+          "accuracy": 0.875,
+          "hard_nll": 0.3665582699227343,
+          "soft_cross_entropy": 0.3665582699227343
+        },
+        "domain:qa": {
+          "n": 8,
+          "accuracy": 0.875,
+          "hard_nll": 0.5079942153185746,
+          "soft_cross_entropy": 0.5079942153185746
+        },
+        "domain:audio": {
+          "n": 8,
+          "accuracy": 0.875,
+          "hard_nll": 0.6964947593792559,
+          "soft_cross_entropy": 0.6964947593792559
+        },
+        "domain:music": {
+          "n": 8,
+          "accuracy": 0.5,
+          "hard_nll": 1.4105935312982183,
+          "soft_cross_entropy": 1.4105935312982183
+        },
+        "domain:cooking": {
+          "n": 8,
+          "accuracy": 0.625,
+          "hard_nll": 1.4772230566377402,
+          "soft_cross_entropy": 1.4772230566377402
+        },
+        "domain:agent_trace_observability": {
+          "n": 150,
+          "accuracy": 0.6733333333333333,
+          "hard_nll": 0.7603510787586371,
+          "soft_cross_entropy": 1.0171035992105801
+        },
+        "domain:lists": {
+          "n": 8,
+          "accuracy": 0.5,
+          "hard_nll": 2.4552887230895513,
+          "soft_cross_entropy": 2.4552887230895513
+        },
+        "domain:play": {
+          "n": 8,
+          "accuracy": 1.0,
+          "hard_nll": 0.04463297685229861,
+          "soft_cross_entropy": 0.04463297685229861
+        },
+        "domain:takeaway": {
+          "n": 8,
+          "accuracy": 0.75,
+          "hard_nll": 0.45963740886509186,
+          "soft_cross_entropy": 0.45963740886509186
+        },
+        "domain:iot": {
+          "n": 8,
+          "accuracy": 0.875,
+          "hard_nll": 0.3714709301473249,
+          "soft_cross_entropy": 0.3714709301473249
+        }
+      },
+      "selection_score": 0.6241666666666666
+    }
+  },
+  "freeze_manifest_sha256": "8f9cb57f16cd4eaca75f4df8dcea00e34544f8a6cb1f231a1d1b3d63394e175d",
+  "evaluation_summary": {
+    "original_english_gate": "PASS",
+    "bilingual_gate": "FAIL",
+    "v1_public_accuracy": 0.525,
+    "v2_public_accuracy": 0.6657608695652174,
+    "lexical_public_accuracy": 0.6744565217391304,
+    "v2_bilingual_accuracy": 0.46785714285714286,
+    "nli_accuracy_each_language": 0.25,
+    "evaluation_evidence": "evaluation/EVALUATION_REPORT.md"
+  }
+}

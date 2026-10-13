@@ -1,0 +1,37 @@
+{
+  "release": "Compass CPU v2 public repository layout",
+  "publisher_display_name": "The Decentralized Compute Company",
+  "source_archive": {
+    "name": "tdcc_compass_cpu_trained_v2.zip",
+    "bytes": 131280919,
+    "sha256": "6c3333f4c745e863dc7647b53ee5d83d7f8072d22ba828f51ab46d29dd513c47"
+  },
+  "original_config_sha256": "3236d335d3e8581377fd9312f82c9d443bc9f93bfe90e9d2db1db280b9967ca2",
+  "model_weights_unchanged": {
+    "joint_head.safetensors": "b2418172f5a16d9e43c13ef2065f88b31ce71163a6d0f3019df048b491167cd4",
+    "adapter/adapter_model.safetensors": "d833a45347f0d050dcfcdac668e45a8fd05d9076ca162914304fa5dc4b00de5d"
+  },
+  "base_model": "Qwen/Qwen3.5-0.8B",
+  "base_revision": "2fc06364715b967f1860aea9cf38778875588b17",
+  "upstream_source_sha256": "0e304cf7c6500e8bb59bef7e2afd2c6373f82596dfb3b57d1aa93c175e2dc3a3",
+  "repackaging_changes": [
+    "Moved selected checkpoint to Hugging Face repository root.",
+    "Replaced the private selected-checkpoint path with a human-readable lineage identifier.",
+    "Added recorded base asset hashes to enforce pinned-base verification in inference.",
+    "Delayed heavyweight imports for lightweight import/help checks and added a CPU thread CLI option.",
+    "Added a configurable pinned base download directory.",
+    "Removed corpus records, logs, caches, environment folders and obsolete orchestration paths from public upload folders.",
+    "Preserved training core and data conversion sources; exact historical training needs separately restored frozen data."
+  ],
+  "not_included": [
+    "base model weights",
+    "training/validation/calibration/test corpus records",
+    "optimizer states",
+    "feature caches",
+    "unselected model weights",
+    "private paths",
+    "secrets",
+    "execution logs"
+  ],
+  "evaluation_note": "Recorded benchmark figures are inherited from the verified source archive; packaging validation does not constitute a fresh benchmark."
+}

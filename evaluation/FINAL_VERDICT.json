@@ -1,0 +1,25 @@
+{
+  "public_performance_gate_passed": true,
+  "bilingual_secondary_gate_passed": false,
+  "integrity_passed": true,
+  "v2_public_accuracy": 0.6657608695652174,
+  "v1_public_accuracy": 0.525,
+  "v2_minus_v1": {
+    "v2_minus_baseline": 0.14076086956521738,
+    "ci95": [
+      0.10597826086956519,
+      0.1744565217391304
+    ],
+    "familywise95_lower": 0.10054347826086962
+  },
+  "lexical_public_accuracy": 0.6744565217391304,
+  "v2_minus_lexical": {
+    "v2_minus_baseline": -0.008695652173912993,
+    "ci95": [
+      -0.03315217391304348,
+      0.015760869565217384
+    ]
+  },
+  "scope": "Experimental English teacher-benchmark and seen-domain bilingual intent improvement. NLI and Turkish unseen-domain intent regress; no broad bilingual reliability or generalTRnoul/score claim.",
+  "frozen_manifest_sha256": "8f9cb57f16cd4eaca75f4df8dcea00e34544f8a6cb1f231a1d1b3d63394e175d"
+}

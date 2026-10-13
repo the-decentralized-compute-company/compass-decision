@@ -1,0 +1,68 @@
+{
+  "created_utc_date": "2026-10-12",
+  "sources": [
+    {
+      "file": "massive-1.1.tar.gz",
+      "url": "https://amazon-massive-nlu-dataset.s3.amazonaws.com/amazon-massive-dataset-1.1.tar.gz",
+      "bytes": 40251390,
+      "sha256": "4cba5faa11c71437928e17cb1b9b3d8b8e727e7ea363a3a9a8045e19c0491577",
+      "license": "CC-BY-4.0"
+    },
+    {
+      "file": "snli_1.0.zip",
+      "url": "https://nlp.stanford.edu/projects/snli/snli_1.0.zip",
+      "bytes": 94550081,
+      "sha256": "afb3d70a5af5d8de0d9d81e2637e0fb8c22d1235c2749d83125ca43dab0dbd3e",
+      "license": "CC-BY-SA-4.0"
+    },
+    {
+      "file": "snli_tr_1.1.zip",
+      "url": "https://nli-tr.s3.eu-central-1.amazonaws.com/snli_tr_1.1.zip",
+      "bytes": 40396164,
+      "sha256": "155aac79fe5085065a59fd3ceea441bbbce729c85f898918a6ffba0d28fecb5c",
+      "license": "CC-BY-SA-4.0"
+    }
+  ],
+  "source_notes": [
+    "Original public archives only; no paid APIs or newly generated translations.",
+    "The official versioned download URLs are pinned by byte hashes.",
+    "Full test archives are retained locally for independent evaluation; this pack selects no final-test records."
+  ],
+  "documentation_snapshots": [
+    {
+      "path": "licenses/MASSIVE_CITATION.md",
+      "sha256": "96d21569b0e2f3b64e7e8a2ff22a5b15570ec3f7f93ffdc26efb01d366fe073f",
+      "bytes": 1128
+    },
+    {
+      "path": "licenses/MASSIVE_LICENSE",
+      "sha256": "c2e6ea015269147de02117ebdd91f30ef09831251f5345fa8365273b1db1d435",
+      "bytes": 18704
+    },
+    {
+      "path": "licenses/MASSIVE_NOTICE.md",
+      "sha256": "b90534ccd20c6f0e1e5239567af0d150496339542b75a15bfbc3e1e737593ddb",
+      "bytes": 502
+    },
+    {
+      "path": "licenses/NLI_TR_PROJECT_README.md",
+      "sha256": "7d5e0be8745006f7d9a82885a9b282d4436e071d38df0559a1c3c7976d4b391d",
+      "bytes": 12091
+    },
+    {
+      "path": "licenses/SNLI_LICENSE_NOTICE.txt",
+      "sha256": "faae70ddb2c526c282852345304935ddccd4347be25813ddea7bb757253383d1",
+      "bytes": 1138
+    },
+    {
+      "path": "licenses/SNLI_README.txt",
+      "sha256": "a27e78bf4ba7bc26033fac15a6596dd41c7ff47b4909e739199c59f91cf1bd4e",
+      "bytes": 5828
+    },
+    {
+      "path": "licenses/SNLI_TR_README.txt",
+      "sha256": "3b155a2df3a0e5d67ebc49a9e63ca0e85533ebc73ae1083f83412d65ab233330",
+      "bytes": 510
+    }
+  ]
+}

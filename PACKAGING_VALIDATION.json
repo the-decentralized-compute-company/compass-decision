@@ -1,0 +1,108 @@
+{
+  "status": "passed",
+  "date_utc": "2026-10-13",
+  "source_archive_sha256": "6c3333f4c745e863dc7647b53ee5d83d7f8072d22ba828f51ab46d29dd513c47",
+  "tests": {
+    "lightweight_package_tests": 8,
+    "evaluator_unit_tests": 10,
+    "bilingual_conversion_unit_tests": 6,
+    "training_engine_unit_tests": 3,
+    "toy_training_resume_tests": 3
+  },
+  "checks": [
+    "All Python sources parse.",
+    "Lightweight inference import and CLI help run without model dependencies.",
+    "Training workspace preparation verifies frozen data hashes and refuses overwrite.",
+    "Model-card YAML parses through huggingface_hub.ModelCard.",
+    "GitHub folder excludes weights and corpus records.",
+    "Release files scanned for private machine paths, personal author strings and common credential formats. No matches found. Public tokenizer vocabulary excluded from text-pattern scanning; byte identity is preserved.",
+    "Safetensors headers confirm expected complete head and adapter parameter counts.",
+    "Selected weight and tokenizer bytes match the verified original archive.",
+    "Base shard/config/index hashes are enforced by the final custom loader."
+  ],
+  "tensor_inventory": {
+    "joint_head.safetensors": {
+      "parameters": 27324932,
+      "tensors": 122,
+      "dtype": "F32",
+      "sha256": "b2418172f5a16d9e43c13ef2065f88b31ce71163a6d0f3019df048b491167cd4"
+    },
+    "adapter/adapter_model.safetensors": {
+      "parameters": 5411328,
+      "tensors": 372,
+      "dtype": "F32",
+      "sha256": "d833a45347f0d050dcfcdac668e45a8fd05d9076ca162914304fa5dc4b00de5d"
+    }
+  },
+  "fresh_cpu_reload": {
+    "passed": true,
+    "scope": "Fresh portable final Hugging Face-layout runtime reload; three original calibration records; no training or final-test tuning.",
+    "records": [
+      {
+        "id": "tr_security_incidents_000152",
+        "input_tokens": 887,
+        "exact_logits_and_probabilities": 17
+      },
+      {
+        "id": "massive:5666:tr",
+        "input_tokens": 1454,
+        "exact_logits_and_probabilities": 60
+      },
+      {
+        "id": "snli:372559387.jpg#0r1c:en",
+        "input_tokens": 212,
+        "exact_logits_and_probabilities": 3
+      }
+    ],
+    "total_exact_logits_and_probabilities": 80,
+    "max_absolute_difference": 0.0,
+    "typed_outputs": [
+      "choice",
+      "noul",
+      "score"
+    ],
+    "invalid_and_overlength_rejections": [
+      "Expected state and nonempty questions mapping",
+      "Expected state and nonempty questions mapping",
+      "Unsupported question",
+      "Choice requires at least two options",
+      "Score requires at least two ordered levels",
+      "Input has 10139 tokens; checkpoint limit is 2048. No decision was made."
+    ],
+    "package_unchanged": true,
+    "weights_and_tokenizer_match_original": true,
+    "base_model": "Qwen/Qwen3.5-0.8B",
+    "base_revision": "2fc06364715b967f1860aea9cf38778875588b17",
+    "base_checksums_verified_by_loader": {
+      "model.safetensors-00001-of-00001.safetensors": "04b1c301231dd422b8860db31311ab2721511346a32cb1e079c4c4e5f1fe4696",
+      "config.json": "b90b86f35c8e6925ef74ee04d0e758f0a845c83a42089ad82bbaa948de9b4204",
+      "model.safetensors.index.json": "d8a08838a613b025eb7952ed9db11696213e57e76a375661ef5c12f9dd5dcf4e"
+    },
+    "temperature": 0.7071067811865475,
+    "tested_files_sha256": {
+      "adapter/adapter_model.safetensors": "d833a45347f0d050dcfcdac668e45a8fd05d9076ca162914304fa5dc4b00de5d",
+      "compass_cpu_config.json": "a4cb16a605da0ffb134a5d7648b087ea6b255dcf88f6bce327f9d768067e4b2b",
+      "joint_head.safetensors": "b2418172f5a16d9e43c13ef2065f88b31ce71163a6d0f3019df048b491167cd4",
+      "predict_cpu.py": "9d536919b18d8b1af5da91b6d4fd2aa3af21a638f5b829e20d79ed882456dbae",
+      "upstream/joint_schema_model.py": "0e304cf7c6500e8bb59bef7e2afd2c6373f82596dfb3b57d1aa93c175e2dc3a3"
+    },
+    "runtime": {
+      "python": "3.12.14",
+      "torch": "2.8.0+cpu",
+      "transformers": "5.2.0",
+      "peft": "0.19.1",
+      "cuda": false,
+      "cpu_capability": "AVX512"
+    },
+    "wall_seconds": 21.654755115509033,
+    "test_script_sha256": "71cea406b07a01ff28c5170a94e911c9a0924101b76738c2c90881956902ec58",
+    "reference_predictions_sha256": "5daf6961f47f9300c3f5ad25c1ab42d1b5e7d02d8993320f2aac8935caeb4e47"
+  },
+  "test_entrypoint_note": "Historical test_resume.py installs its toy engine only as a script. The first combined unittest invocation failed due to missing stubs; corrected script entry points passed 3 engine and 3 resume tests. Documentation uses the passing invocation. No real model retraining was performed.",
+  "limits": [
+    "No external publication or end-to-end platform upload was performed.",
+    "No retraining, new benchmark, GPU, Windows or macOS runtime validation.",
+    "Full raw/frozen corpus records and original per-record prediction evidence are not in this clean upload package.",
+    "Trained-weight redistribution license remains unresolved; license: other is a disclosure, not a grant."
+  ]
+}

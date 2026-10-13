@@ -1,0 +1,13 @@
+{
+  "research/tdcc_compass_v2/data/train.jsonl": "2220caeb26ce7a9d891ccb479ec33bd4f5e536d33b80b82c4f71e8e10ae2beb3",
+  "research/tdcc_compass_v2/data/dev.jsonl": "897bdeb776fa1ea78060a9f03f7b586f0c36a55c9c2a3a4770d9fd31c3141015",
+  "research/tdcc_compass_v2/data/calibration.jsonl": "31d68ebdd058e79aa915f3de5896641e452eaecbe87bb520aad0375f33e2cb1b",
+  "research/tdcc_compass_v2/data/manifest.json": "08fe499246081e708bd6ae58accb190ff5c860fbeee71a3836e31b8577b467b3",
+  "research/tdcc_compass_v2/data/original_train.jsonl": "1ea0c296e69f997417bc0651fdc13dd84b659211cd6850268508b7aad413caf7",
+  "research/tdcc_compass_v2/data/original_dev.jsonl": "32325d57673eb98061e462bac8d28d3375a2fc2136fc35e37f9cbdab1dbb8214",
+  "research/tdcc_compass_v2/data/original_calibration.jsonl": "3977cf04232b64b4c848c58c8043f2c5246f2766486171a415899e219d30846d",
+  "research/tdcc_compass_v2/data/original_manifest.json": "30a144c47affd8ab6b2d40097bbecc8f4700953ed1d446e3bc3be359f1e243d0",
+  "research/tdcc_compass_cpu/data/pilot/train.jsonl": "7558eff4c0292b6870dadabe8fe01a1345e1a0a65b9a4e4228b6b6cd0f622ff6",
+  "research/tdcc_compass_cpu/data/pilot/dev.jsonl": "fcafc7fb7c70a20c16b4941b998ae6b7f8aa55a02acb8fdeb2305b050ff59831",
+  "research/tdcc_compass_cpu/data/pilot/calibration.jsonl": "03f852caea651f63153b4030cf06f9e4218f130a1d41bcda4e61280b15011148"
+}

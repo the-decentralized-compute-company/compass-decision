@@ -1,0 +1,16 @@
+# Pre-outcome amendments
+
+## 2026-10-12 08:58 UTC
+
+Recorded before v2 optimization, final test inference, or any test performance outcomes. Original protocol remains unchanged as an audit trail.
+
+1. MASSIVE uses one fixed full-60-intent schema per language. This supersedes the proposed domain-supplied candidate schemas. Reason: the held-out news domain has one intent, making a domain-supplied test trivial. All 60 option descriptions appear in train/dev/test schemas; unseen domains refer to unseen labeled examples, not unseen options or unseen question schemas. Same fixed schema and numeric IDs for all examples, never gold-dependent. Data worker's training/dev/calibration audit finds max 1,449 tokens. This harder classification task is described as full-60 intent selection.
+2. Shared final inference maximum length is 2,048 for v1 and v2. V1 weights, tokenizer, calibration and all computation remain unchanged; only its runtime rejection limit is raised from 1,536. Training retains a no-truncation 1,536-token check. No test input length has yet driven this choice. Final length audit will disclose actual ranges, and overlength records will not be silently trimmed or excluded.
+3. Remove original training record `tr_security_incidents_000063` before optimization because its generator factors exactly duplicate original test record `security_incidents_000032`, despite different rendered states. Original typed train becomes 959 records (4,795 fields), with 120 development and 120 calibration unchanged. The full 368-record primary test is unchanged. Existing zero-adapter feature-cache computation is not training and does not expose test labels. Report the factor-duplicate record as an additional one-record sensitivity slice even after exclusion.
+4. Bilingual test selection quotas are fixed at eight distinct source/template families per each of 15 trained MASSIVE domains (120 pairs), 20 per each of the three unseen domains (60 pairs), and 100 SNLI image families (100 pairs). Select families by SHA256 with seed `compass-v2-confirmatory-bilingual-48021`, then one pair ID per family by the same hash order. Select source groups independent of test labels; invalid/no-consensus SNLI labels and empty texts are ineligible. No Turkish quality or length filter is applied to final test. Exact selection implementation is `freeze_bilingual.py`.
+
+No primary target, accuracy threshold, baseline, uncertainty method, or failure rule is weakened.
+
+## 2026-10-12 09:04 UTC
+
+Before optimization or performance outcomes, additional bilingual development and calibration each expanded from 78 to 240 rows (60 MASSIVE source pairs plus 60 SNLI source pairs) to reduce checkpoint/calibration noise. Earlier 78 rows remain in their same partition. Added examples are deterministic unused original-dev source families; all original-test families remain excluded. Extra training is unchanged at 900 rows. Final combined partitions are 1,859 train, 360 development, 360 calibration; final evaluation pools remain unchanged. Final extra hashes: train `7dd9fc4991de80c68bf238cf9a39cb7ec232f05e150882adb19f270c3146704e`; dev `f5520a78b35eece317f8fa6505ca863201051fa7086ab7a15b327edcbfacc825`; calibration `e18779585eb046e27c9379ba629ea425ec42939e9d3b0c61afbacad0063e2ad7`.

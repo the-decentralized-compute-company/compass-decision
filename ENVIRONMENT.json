@@ -1,0 +1,12 @@
+{
+  "python": "3.12.14",
+  "torch": "2.8.0+cpu",
+  "transformers": "5.2.0",
+  "peft": "0.19.1",
+  "cpu_threads_used": 6,
+  "torch_interop_threads": 1,
+  "cuda_available": false,
+  "cpu_capability": "AVX512",
+  "environment_source": "Same isolated CPU virtual environment used by the v1 pilot; pinned dependencies are bundled.",
+  "runtime_note": "No CUDA/FlashAttention/fused causal-convolution packages were installed; upstream reported the fallback PyTorch implementation."
+}

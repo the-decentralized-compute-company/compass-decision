@@ -1,0 +1,15 @@
+SNLI 1.0 and SNLI-TR 1.1
+
+The original projects identify both datasets as licensed under Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0).
+License: https://creativecommons.org/licenses/by-sa/4.0/
+Legal code: https://creativecommons.org/licenses/by-sa/4.0/legalcode
+
+SNLI authors: Samuel R. Bowman, Gabor Angeli, Christopher Potts and Christopher D. Manning (2015).
+Original project: https://nlp.stanford.edu/projects/snli/
+The corpus includes Flickr30k content: Peter Young, Alice Lai, Micah Hodosh and Julia Hockenmaier (2014), and some VisualGenome pilot captions as described by SNLI.
+
+SNLI-TR authors: Emrah Budur, Rıza Özçelik, Tunga Güngör and Christopher Potts (2020).
+Original project and license statement: https://github.com/boun-tabi/NLI-TR
+Turkish text is machine-translated by the source project.
+
+This Compass conversion changes schema formatting and sample membership; it preserves the source texts and source labels. Derived SNLI/SNLI-TR records retain CC BY-SA 4.0 attribution and applicable ShareAlike obligations. See SOURCES_AND_LICENSES.md for the full conversion/provenance description.

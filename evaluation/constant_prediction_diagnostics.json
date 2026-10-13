@@ -1,0 +1,57 @@
+{
+  "description": "Post-hoc descriptive checks, not a changed gate. A constant top label is evidence of absent discrimination on this slice, even if probability values vary.",
+  "v2_constant_multilabel_slices": [
+    {
+      "language": "en",
+      "domain": "invoice_processing",
+      "question": "duplicate",
+      "decisions": 92,
+      "always_predicts": "false",
+      "accuracy": 0.8913043478260869,
+      "gold_counts": {
+        "false": 82,
+        "true": 10
+      }
+    },
+    {
+      "language": "en",
+      "domain": "security_incidents",
+      "question": "disposition",
+      "decisions": 92,
+      "always_predicts": "investigate",
+      "accuracy": 0.75,
+      "gold_counts": {
+        "contain": 13,
+        "investigate": 69,
+        "close_benign": 2,
+        "monitor": 8
+      }
+    },
+    {
+      "language": "en",
+      "domain": "caption_nli",
+      "question": "relation",
+      "decisions": 100,
+      "always_predicts": "neutral",
+      "accuracy": 0.25,
+      "gold_counts": {
+        "contradiction": 34,
+        "entailment": 41,
+        "neutral": 25
+      }
+    },
+    {
+      "language": "tr",
+      "domain": "caption_nli",
+      "question": "relation",
+      "decisions": 100,
+      "always_predicts": "neutral",
+      "accuracy": 0.25,
+      "gold_counts": {
+        "contradiction": 34,
+        "entailment": 41,
+        "neutral": 25
+      }
+    }
+  ]
+}

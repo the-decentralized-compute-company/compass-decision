@@ -1,0 +1,63 @@
+{
+  "train": {
+    "en": {
+      "choice": 1889,
+      "noul": 1438,
+      "score": 1918
+    },
+    "tr": {
+      "choice": 450,
+      "noul": 0,
+      "score": 0
+    }
+  },
+  "development": {
+    "en": {
+      "choice": 300,
+      "noul": 180,
+      "score": 240
+    },
+    "tr": {
+      "choice": 120,
+      "noul": 0,
+      "score": 0
+    }
+  },
+  "calibration": {
+    "en": {
+      "choice": 300,
+      "noul": 180,
+      "score": 240
+    },
+    "tr": {
+      "choice": 120,
+      "noul": 0,
+      "score": 0
+    }
+  },
+  "public_final": {
+    "en": {
+      "choice": 552,
+      "noul": 552,
+      "score": 736
+    },
+    "tr": {
+      "choice": 0,
+      "noul": 0,
+      "score": 0
+    }
+  },
+  "bilingual_final": {
+    "en": {
+      "choice": 280,
+      "noul": 0,
+      "score": 0
+    },
+    "tr": {
+      "choice": 280,
+      "noul": 0,
+      "score": 0
+    }
+  },
+  "interpretation": "Turkish evidence is limited to choice classification; this run contains no Turkish noul or score training/evaluation examples. English workflow teacher labels do not establish Turkish typed-decision capability."
+}

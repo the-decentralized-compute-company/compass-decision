@@ -1,0 +1,2 @@
+# Exact recorded Linux CPU environment. Install torch from the official CPU index first.
+-r requirements-cpu.lock.txt
